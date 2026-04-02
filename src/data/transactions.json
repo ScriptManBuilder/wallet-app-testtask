@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "type": "credit",
+    "amount": 68.54,
+    "name": "Apple Store",
+    "description": "MacBook Pro accessories",
+    "date": "2026-04-01T14:32:00",
+    "pending": false,
+    "authorizedUser": null
+  },
+  {
+    "id": 2,
+    "type": "payment",
+    "amount": 500.00,
+    "name": "Payment Thank You",
+    "description": "Online payment received",
+    "date": "2026-04-02T09:15:00",
+    "pending": false,
+    "authorizedUser": null
+  },
+  {
+    "id": 3,
+    "type": "credit",
+    "amount": 234.87,
+    "name": "IKEA",
+    "description": "Home furniture",
+    "date": "2026-03-31T18:45:00",
+    "pending": true,
+    "authorizedUser": "Sarah Miller"
+  },
+  {
+    "id": 4,
+    "type": "credit",
+    "amount": 12.99,
+    "name": "Spotify",
+    "description": "Premium subscription",
+    "date": "2026-03-30T00:00:00",
+    "pending": false,
+    "authorizedUser": null
+  },
+  {
+    "id": 5,
+    "type": "credit",
+    "amount": 89.42,
+    "name": "Target",
+    "description": "Groceries and essentials",
+    "date": "2026-03-28T11:20:00",
+    "pending": false,
+    "authorizedUser": "James Wilson"
+  },
+  {
+    "id": 6,
+    "type": "credit",
+    "amount": 45.00,
+    "name": "Uber",
+    "description": "Ride to airport",
+    "date": "2026-03-27T07:30:00",
+    "pending": false,
+    "authorizedUser": null
+  },
+  {
+    "id": 7,
+    "type": "payment",
+    "amount": 250.00,
+    "name": "Payment Thank You",
+    "description": "Mobile payment received",
+    "date": "2026-03-25T16:00:00",
+    "pending": false,
+    "authorizedUser": null
+  },
+  {
+    "id": 8,
+    "type": "credit",
+    "amount": 152.30,
+    "name": "Amazon",
+    "description": "Electronics order",
+    "date": "2026-03-22T13:10:00",
+    "pending": true,
+    "authorizedUser": null
+  },
+  {
+    "id": 9,
+    "type": "credit",
+    "amount": 9.99,
+    "name": "Netflix",
+    "description": "Monthly subscription",
+    "date": "2026-03-20T00:00:00",
+    "pending": false,
+    "authorizedUser": "Sarah Miller"
+  },
+  {
+    "id": 10,
+    "type": "credit",
+    "amount": 327.15,
+    "name": "Walmart",
+    "description": "Weekly shopping",
+    "date": "2026-03-18T10:45:00",
+    "pending": false,
+    "authorizedUser": null
+  }
+]
