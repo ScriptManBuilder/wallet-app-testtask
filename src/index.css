@@ -77,13 +77,12 @@ body {
   grid-row: 1;
 }
 
-/* No Payment Due — top-right */
+/* No Payment Due — right column, spans both rows */
 .no-payment {
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 1 / span 2;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
   justify-content: space-between;
   gap: 8px;
 }
@@ -91,20 +90,20 @@ body {
 .no-payment-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  flex: 1;
+  gap: 3px;
 }
 
 .no-payment-check {
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: var(--bg);
-  color: var(--green);
+  border: 1.5px solid #c6c6cc;
+  background: transparent;
+  color: #a0a0ab;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   flex-shrink: 0;
   align-self: flex-end;
 }
@@ -113,8 +112,9 @@ body {
 .daily-points {
   grid-column: 1;
   grid-row: 2;
+ 
 }
-
+/* 
 .card-icon {
   width: 32px;
   height: 32px;
@@ -129,24 +129,38 @@ body {
 
 .card-icon.blue {
   background: var(--blue);
-}
+} */
 
 .card-label {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-secondary);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+}
+
+.card-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
 }
 
 .card-value {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.daily-points .card-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .card-sub {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 /* ======================== Transactions Section ======================== */
@@ -197,14 +211,13 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: var(--primary);
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   flex-shrink: 0;
   margin-top: 2px;
+  border: 1px solid var(--border);
 }
 
 .transaction-body {

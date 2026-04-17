@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { FaCreditCard, FaCheckCircle, FaStar } from "react-icons/fa";
+import { FaCreditCard, FaCheck } from "react-icons/fa";
 import { calculateDailyPoints, formatPoints } from "../utils/dailyPoints";
 
 const CARD_LIMIT = 1500;
@@ -15,13 +15,12 @@ export default function SummaryCards() {
   const balance = useMemo(() => getCardBalance(), []);
   const available = CARD_LIMIT - balance;
   const points = useMemo(() => calculateDailyPoints(), []);
+  const monthName = new Date().toLocaleDateString("en-US", { month: "long" });
 
   return (
     <div className="summary-cards">
       <div className="summary-card card-balance">
-        <div className="card-icon">
-          <FaCreditCard />
-        </div>
+       
         <span className="card-label">Card Balance</span>
         <span className="card-value">${balance.toFixed(2)}</span>
         <span className="card-sub">${available.toFixed(2)} Available</span>
@@ -29,18 +28,15 @@ export default function SummaryCards() {
 
       <div className="summary-card no-payment">
         <div className="no-payment-text">
-          <span className="card-label">No Payment Due</span>
-          <span className="card-sub">You've paid your balance.</span>
+          <span className="card-title">No Payment Due</span>
+          <span className="card-sub">You've paid your {monthName} balance.</span>
         </div>
-        <div className="no-payment-check">
-          <FaCheckCircle />
+        <div className="no-payment-check" aria-label="Paid">
+          <FaCheck />
         </div>
       </div>
 
       <div className="summary-card daily-points">
-        <div className="card-icon blue">
-          <FaStar />
-        </div>
         <span className="card-label">Daily Points</span>
         <span className="card-value">{formatPoints(points)}</span>
       </div>

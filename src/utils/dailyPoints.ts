@@ -41,10 +41,10 @@ export function calculateDailyPoints(date: Date = new Date()): number {
   for (let i = 1; i <= day; i++) {
     if (i === 1) points.push(2);
     else if (i === 2) points.push(3);
-    else points.push(points[i - 3] + 0.6 * points[i - 2]);
+    else points.push(Math.round(points[i - 3] + 0.6 * points[i - 2]));
   }
 
-  return Math.round(points[day - 1]);
+  return points[day - 1];
 }
 
 export function formatPoints(pts: number): string {

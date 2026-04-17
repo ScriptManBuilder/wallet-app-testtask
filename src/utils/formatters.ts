@@ -22,7 +22,9 @@ export function formatDate(dateStr: string): string {
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const diffDays = Math.round((today.getTime() - dateDay.getTime()) / (1000 * 60 * 60 * 24));
 
-  if (diffDays >= 0 && diffDays < 7) {
+  if (diffDays === 0) return "Today";
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays >= 2 && diffDays < 7) {
     return date.toLocaleDateString("en-US", { weekday: "long" });
   }
 
