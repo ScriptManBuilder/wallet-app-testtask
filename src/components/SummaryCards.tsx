@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { FaCreditCard, FaCheck } from "react-icons/fa";
+import {  FaCheck } from "react-icons/fa";
 import { calculateDailyPoints, formatPoints } from "../utils/dailyPoints";
 
 const CARD_LIMIT = 1500;
